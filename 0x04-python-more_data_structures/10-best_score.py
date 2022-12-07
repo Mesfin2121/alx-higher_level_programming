@@ -7,4 +7,4 @@ def best_score(a_dictionary):
             if value > biggest_value:
                 biggest_value = value
                 biggest_key = key
-    return biggest_key 
+    return biggest_key
