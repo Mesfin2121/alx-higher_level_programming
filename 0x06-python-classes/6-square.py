@@ -5,18 +5,13 @@
 class Square:
     """class Square
     """
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """Inizialitation of variables
         Arg self identificador
         size tamañe of square
         """
         self.size = size
-
-    def area(self):
-        """Inizialitation of variables
-        Arg self identificador
-        """
-        return self.__size ** 2
+        self.position = position
 
     @property
     def size(self):
@@ -72,5 +67,7 @@ class Square:
         if self.__size == 0:
             print()
         else:
-            for i in range(0, self.__size):
-                print("#" * self.__size)
+            for row in range(self.__postion[1]):
+                print()
+            for row in range(0, self.__size):
+                print(" " * self.__position[0] + "#" * self.__size)
