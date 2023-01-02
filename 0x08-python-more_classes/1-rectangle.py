@@ -6,9 +6,9 @@ class Rectangle():
     """Representation of a Rectangle"""
 
     def __init__(self, width=0, height=0):
-    """Instantiation with width and height"""
-    self.width = width
-    self.height = height
+        """Instantiation with width and height"""
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -31,9 +31,9 @@ class Rectangle():
 
     @height.setter
     def height(self, value):
-    """Property setter to set height"""
-    if type(value) is not int:
-        raise TypeError("height must be an integer")
-    elif value < 0:
-        raise ValueError("height must be >= 0")
+        """Property setter to set height"""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise ValueError("height must be >= 0")
         self.__height = value
