@@ -4,7 +4,7 @@
     - displays one character name by line.
 */
 const request = require('request');
-const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
+const url = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
 request(url, function (error, response, body) {
   if (error) console.log(error);
   else {
@@ -15,7 +15,7 @@ request(url, function (error, response, body) {
         if (error) console.log(error);
         else {
           let id = JSON.parse(body).url;
-          id = id.replace('https://swapi-api.hbtn.io/api/people/', '');
+          id = id.replace('https://swapi-api.alx-tools.com/api/people/', '');
           id = id.replace('/', '');
           const name = JSON.parse(body).name;
           characters_dict[id] = (name);
